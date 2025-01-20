@@ -34,8 +34,8 @@
 // export default App
 
 import "./App.css";
-import HeroSection from "./components/Hero";
-import Navigation from "./components/Navigation";
+import HeroSection from "./components/Hero.jsx";
+import Navigation from "./components/Navigation.jsx";
 import React, { useState } from "react";
 import { Brain, Menu, X, Mail, Info } from "lucide-react";
 import './app2.css'
