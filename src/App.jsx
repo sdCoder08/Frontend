@@ -33,11 +33,14 @@
 // }
 // export default App
 
+import "./App.css";
+import HeroSection from "./components/Hero";
+import Navigation from "./components/Navigation";
 import React, { useState } from "react";
 import { Brain, Menu, X, Mail, Info } from "lucide-react";
 import './app2.css'
 
-function App() {
+const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isSignupOpen, setIsSignupOpen] = useState(false);
@@ -86,9 +89,8 @@ function App() {
       setIsSignupOpen(false);
     }
   };
-
   return (
-    <div className="app-container">
+      <div className="app-container">
       <nav className="navbar">
         <div className="nav-brand">
           <Brain className="brand-icon" />
@@ -158,77 +160,10 @@ function App() {
       )}
 
       {message && <p className="message">{message}</p>}
-
-      <main>
-        <section className="hero">
-          <div className="hero-content">
-            <h1>Understanding the Human Mind</h1>
-            <p>
-              Explore the fascinating world of human intelligence and
-              consciousness.
-            </p>
-          </div>
-        </section>
-
-        <section className="features">
-          <div className="feature-card">
-            <h2>Neural Networks</h2>
-            <p>
-              The human brain contains approximately 86 billion neurons,
-              forming complex networks that enable thought, memory, and
-              consciousness.
-            </p>
-          </div>
-          <div className="feature-card">
-            <h2>Cognitive Functions</h2>
-            <p>
-              From problem-solving to emotional intelligence, discover how
-              different parts of our brain work together to create our unique
-              human experience.
-            </p>
-          </div>
-          <div className="feature-card">
-            <h2>Intelligence Types</h2>
-            <p>
-              Explore multiple forms of intelligence including logical,
-              emotional, spatial, and creative thinking abilities.
-            </p>
-          </div>
-        </section>
-
-        <section id="about" className="about">
-          <div className="section-header">
-            <Info className="section-icon" />
-            <h2>About Us</h2>
-          </div>
-          <p>
-            We are dedicated to understanding and sharing knowledge about human
-            intelligence and cognitive science. Our mission is to make complex
-            neuroscience concepts accessible to everyone.
-          </p>
-        </section>
-
-        <section id="contact" className="contact">
-          <div className="section-header">
-            <Mail className="section-icon" />
-            <h2>Contact Us</h2>
-          </div>
-          <p>
-            Have questions about human intelligence or want to learn more?
-            Reach out to our team of experts.
-          </p>
-          <div className="contact-info">
-            <p>Email: info@mindscope.org</p>
-            <p>Phone: (555) 123-4567</p>
-          </div>
-        </section>
-      </main>
-
-      <footer>
-        <p>&copy; 2024 MindScope. All rights reserved.</p>
-      </footer>
+      <Navigation />
+      <HeroSection />
     </div>
   );
-}
+};
 
 export default App;
