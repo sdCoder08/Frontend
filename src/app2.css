@@ -1,17 +1,4 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-  }
-  
-  .app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
+
   /* Navbar */
   .navbar {
     display: flex;
@@ -147,28 +134,7 @@ body {
     font-size: 1.2rem;
     color: #007bff;
   }
-  
-  /* Hero Section */
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    background-color: #00bcd4;
-    color: white;
-  }
-  
-  .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-  
-  /* Features Section */
+
   .features {
     display: flex;
     justify-content: space-around;
